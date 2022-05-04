@@ -1,6 +1,6 @@
 import * as fs from 'fs';
-import {TextToCommandConverter} from './src/commandRunner/TextToCommandConverter';
-import {CommandRunner} from './src/commandRunner/CommandRunner';
+import {TextToCommandConverter} from './src/commands/TextToCommandConverter';
+import {CommandRunner} from './src/commands/CommandRunner';
 
 
 const dataPath = process.argv[2] || './src/examples/basic.txt';
