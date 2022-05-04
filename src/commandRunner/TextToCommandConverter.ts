@@ -14,7 +14,7 @@ export class TextToCommandConverter {
         params,
         query: line,
       }
-    })
+    });
 
     return commands;
   }

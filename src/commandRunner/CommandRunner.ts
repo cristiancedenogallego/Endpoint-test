@@ -1,11 +1,10 @@
-import {TreeFolder} from "../../directoryTree/entities";
+import {TreeFolder} from "../directoryTree/entities";
 import {Command} from "./entities";
-import {Statement} from '../../statements/Statement';
-import CreateStatement from '../../statements/CreateStatement';
-import {ListStatement} from "../../statements/ListStatement";
-import DeleteStatement from "../../statements/DeleteStatement";
-import MoveStatement from "../../statements/MoveStatement";
-import NotImplementedStatement from "../../statements/NotImplementedStatement";
+import CreateStatement from '../statements/CreateStatement';
+import {ListStatement} from "../statements/ListStatement";
+import DeleteStatement from "../statements/DeleteStatement";
+import MoveStatement from "../statements/MoveStatement";
+import NotImplementedStatement from "../statements/NotImplementedStatement";
 
 
 export class CommandRunner {
@@ -35,7 +34,7 @@ export class CommandRunner {
   run(): TreeFolder {
     this.commands.forEach((c: Command) => {
       console.log(c.query);
-      const StatementRunnerClass = this.getStatementRunnerClass(c); 
+      const StatementRunnerClass = this.getStatementRunnerClass(c);
       const statementRunner = new StatementRunnerClass(this.tree, c.params);
       this.tree = statementRunner.run();
     })

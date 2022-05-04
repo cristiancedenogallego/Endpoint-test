@@ -1,9 +1,11 @@
 import * as fs from 'fs';
-import {TextToCommandConverter} from './src/commandRunner/utils/TextToCommandConverter';
-import {CommandRunner} from './src/commandRunner/utils/CommandRunner';
+import {TextToCommandConverter} from './src/commandRunner/TextToCommandConverter';
+import {CommandRunner} from './src/commandRunner/CommandRunner';
 
 
-fs.readFile('./src/examples/basic.txt', 'utf8', (err, data) => {
+const dataPath = process.argv[2] || './src/examples/basic.txt';
+
+fs.readFile(dataPath, 'utf8', (err, data) => {
   if (err) {
     console.error(err);
     return;

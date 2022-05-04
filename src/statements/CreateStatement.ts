@@ -12,7 +12,7 @@ export default class CreateStatement implements Statement {
     subfolders.forEach((sf) => {
       const children = pointer.children.find(c => c?.name === sf)
       if (children) {
-        pointer = children; 
+        pointer = children;
       } else {
         const newNode = {
           name: sf,
@@ -23,5 +23,5 @@ export default class CreateStatement implements Statement {
       }
     })
     return this.root;
-  } 
+  }
 }

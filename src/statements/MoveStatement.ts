@@ -20,7 +20,7 @@ export default class MoveStatement implements Statement {
           pointer = pointer.children[childrenIndex];
           return false;
         }
-      }; 
+      };
 
       return false;
     });
@@ -29,8 +29,8 @@ export default class MoveStatement implements Statement {
 
   run(): TreeFolder {
     const [path, target] = this.params;
-    const nodeToMove = this.removeNode(); 
-    
+    const nodeToMove = this.removeNode();
+
     if (!nodeToMove) {
         console.log(`The folder ${path} does not exist`)
     }
@@ -38,9 +38,8 @@ export default class MoveStatement implements Statement {
 
     const subfolders = target.split('/');
 
-    let pointer: TreeFolder = this.root;
     subfolders.some((sf: string, index: number) => {
-      const children = pointer.children.find(c => c?.name === sf);
+      const children = this.root.children.find(c => c?.name === sf);
       if (children) {
         if (index === subfolders.length - 1 && nodeToMove) {
           children.children.push(nodeToMove)
