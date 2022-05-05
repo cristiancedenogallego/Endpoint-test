@@ -4,6 +4,7 @@ I use typescript because it allowsme to do a well organized code and apply certa
 # How to run
 Next command runs the software with the default test string saved in 'src/examles/basic.txt' 
 `npm install` or `yarn install`
+
 `npx ts-node cli.ts`
 
 But you can also pass any path file to the script and it will run it for example:
