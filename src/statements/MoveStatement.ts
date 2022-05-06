@@ -35,7 +35,6 @@ export default class MoveStatement implements Statement {
         console.log(`The folder ${path} does not exist`)
     }
 
-
     const subfolders = target.split('/');
 
     subfolders.some((sf: string, index: number) => {
@@ -47,7 +46,7 @@ export default class MoveStatement implements Statement {
       } else {
         return false;
       }
-    })
+    });
 
     return this.root;
 

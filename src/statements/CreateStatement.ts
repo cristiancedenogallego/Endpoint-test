@@ -5,7 +5,7 @@ export default class CreateStatement implements Statement {
   constructor(private root: TreeFolder,  private params: string[]) {
   }
 
-  run(): TreeFolder {
+  public run(): TreeFolder {
     const [path] = this.params;
     const subfolders = path.split('/');
     let pointer: TreeFolder = this.root;

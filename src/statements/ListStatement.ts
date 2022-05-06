@@ -15,19 +15,19 @@ export class ListStatement implements Statement {
     return 0;
   }
 
-  printNode(root: TreeFolder, level = 0) {
+  printNode(root: TreeFolder, level: number) {
     // This for the empty root
     if (root.name) {
-      console.log(`${'-'.repeat(level)}${root.name}`);
+      console.log(`${' '.repeat(level)}${root.name}`);
     }
 
     root?.children?.sort(this.compareNodeNames).forEach((ch) => {
       this.printNode(ch, level + 1);
-    })
+    });
   }
 
   run(): TreeFolder {
-    this.printNode(this.root);
+    this.printNode(this.root, -1);
     return this.root;
   }
 };
