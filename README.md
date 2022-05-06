@@ -11,6 +11,10 @@ Next command runs the software with the default test string saved in 'src/examle
 But you can also pass any path file to the script and it will run it for example:
 `npx ts-node cli.ts './src/examples/test.txt'`
 
+# How to run tests
+`npm run test` or `yarn test`
+
+
 # Problem analysis
 I split the problem in 2 parts
 
