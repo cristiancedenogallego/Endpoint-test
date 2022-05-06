@@ -1,9 +1,11 @@
 # # Tech Stack
-I use typescript because it allowsme to do a well organized code and apply certain patters that are usefull for the problem
+I use typescript because it allows me to do a well organized code and apply certain patterns that are useful for the problem.
 
 # How to run
 Next command runs the software with the default test string saved in 'src/examles/basic.txt' 
+
 `npm install` or `yarn install`
+
 `npx ts-node cli.ts`
 
 But you can also pass any path file to the script and it will run it for example:
